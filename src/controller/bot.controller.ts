@@ -5,7 +5,7 @@ import { BotService } from '../service/bot.service';
 export class BotController {
   constructor(private readonly botService: BotService) {}
 
-  @Post('sendMsg/:id')
+  @Post('sendmsg/:id')
   async sendMessage(@Res() res, @Req() req) {
     this.botService.route(res, req);
   }
